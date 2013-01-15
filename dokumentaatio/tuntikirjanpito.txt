@@ -1,0 +1,5 @@
+Tuntikirjanpito
+
+Pvm	Tunnit	Kuvaus
+14.01	2h	Alustava suunnittelu
+15.01	1h	GitHub repo, aihemäärittely, deadline I 
