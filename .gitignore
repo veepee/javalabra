@@ -1,1 +1,13 @@
 /pong/nbproject/private/
+/pong/build/
+/pong/nbbuild/
+/pong/dist/
+/pong/nbdist/
+/pong/nbactions.xml
+/pong/nb-configuration.xml
+
+*.class
+
+*.jar
+*.war
+*.ear
