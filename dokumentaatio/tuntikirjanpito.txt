@@ -3,3 +3,5 @@ Tuntikirjanpito
 Pvm	Tunnit	Kuvaus
 14.01	2h	Alustava suunnittelu
 15.01	1h	GitHub repo, aihemäärittely, deadline I 
+21.01   4h	Luokkarakenteen pohtimista ja muutama logiikkaluokka
+22.01 	1h	Yksinkertainen määrittelyvaiheen luokkakaavio
