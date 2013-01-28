@@ -36,16 +36,23 @@ public class BoundingBoxTest {
     
     @Test
     public void testCollision_TwoOverlappingBoxes_ShouldCollide() {
-        BoundingBox bb1 = new BoundingBox(1, 1, 4, 4);
-        BoundingBox bb2 = new BoundingBox(2, 2, 4, 4);
+        BoundingBox bb1 = new BoundingBox(0, 5, 10, 2);
+        BoundingBox bb2 = new BoundingBox(5, 0, 2, 10);
         assertEquals(true, bb1.collidesWith(bb2));
     }
 
     @Test
     public void testCollision_TwoNonOverlappingBoxes_ShouldNotCollide() {
-        BoundingBox bb1 = new BoundingBox(0, 0, 3, 1);
-        BoundingBox bb2 = new BoundingBox(10, 5, 3, 1);
+        BoundingBox bb1 = new BoundingBox(0, 0, 4, 4);
+        BoundingBox bb2 = new BoundingBox(5, 5, 8, 8);
         assertEquals(false, bb1.collidesWith(bb2));
+    }
+    
+    @Test
+    public void testCollision_TouchingBoxes_ShouldCollide() {
+        BoundingBox bb1 = new BoundingBox(0, 0, 2, 2);
+        BoundingBox bb2 = new BoundingBox(2, 2, 2, 2);
+        assertEquals(true, bb1.collidesWith(bb2));
     }
     
 }

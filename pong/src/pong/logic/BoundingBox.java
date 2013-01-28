@@ -36,8 +36,8 @@ public class BoundingBox {
     }
     
     public boolean collidesWith(BoundingBox another) {
-        return (Math.abs(getX() - another.getX()) * 2 < (getWidth() + another.getWidth()) &&
-            Math.abs(getY() - another.getY()) * 2 < (getHeight() + another.getHeight()));
+        return !(this.x > another.x + another.w || this.x + this.w < another.x
+                || this.y > another.y + another.h || this.y + this.h < another.y);
     }
     
 }
