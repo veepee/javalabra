@@ -2,36 +2,36 @@ package pong.logic;
 
 public class BoundingBox {
 
-    private int x, y, w, h;
+    private double x, y, w, h;
 
-    public BoundingBox(int x, int y, int w, int h) {
+    public BoundingBox(double x, double y, double w, double h) {
         this.x = x;
         this.y = y;
         this.w = w;
         this.h = h;
     }
 
-    public int getX() {
+    public double getX() {
         return x;
     }
     
-    public int getY() {
+    public double getY() {
         return y;
     }
     
-    public void setX(int x) {
+    public void setX(double x) {
         this.x = x;
     }
     
-    public void setY(int y) {
+    public void setY(double y) {
         this.y = y;
     }
     
-    public int getWidth() {
+    public double getWidth() {
         return w;
     }
     
-    public int getHeight() {
+    public double getHeight() {
         return h;
     }
     

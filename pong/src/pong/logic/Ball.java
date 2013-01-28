@@ -2,33 +2,33 @@ package pong.logic;
 
 public class Ball extends Entity {
 
-    private int vx;
-    private int vy;
-    
-    public Ball(int x, int y) {
-        super(new BoundingBox(x, y, 4, 4));
+    private double vx;
+    private double vy;
+
+    public Ball(double x, double y) {
+        super(new BoundingBox(x, y, 4.0, 4.0));
     }
 
-    public int getX() {
+    public double getX() {
         return getBoundingBox().getX();
     }
     
-    public int getY() {
+    public double getY() {
         return getBoundingBox().getY();
     }
     
-    public void setVelocity(int vx, int vy) {
+    public void setVelocity(double vx, double vy) {
         this.vx = vx;
         this.vy = vy;
     }
     
-    public int[] getVelocity() {
-        int[] vel = {vx, vy};
+    public double[] getVelocity() {
+        double[] vel = {vx, vy};
         return vel;
     }
     
-    public void update() {
-        getBoundingBox().setX(getX() + vx);
-        getBoundingBox().setY(getY() + vy);
+    public void update(int delta) {
+        getBoundingBox().setX(getX() + vx * (delta/10.0));
+        getBoundingBox().setY(getY() + vy * (delta/10.0));
     }
 }

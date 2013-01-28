@@ -2,24 +2,24 @@ package pong.logic;
 
 public class Paddle extends Entity {
     
-    public Paddle(int x, int y) {
+    public Paddle(double x, double y) {
         super(new BoundingBox(x, y, 4, 16));
     }
 
-    public int getY() {
+    public double getY() {
         return getBoundingBox().getY();
     }
     
-    public void setY(int y) {
+    public void setY(double y) {
         getBoundingBox().setY(y);
     }
     
-    public void moveUp() {
-        getBoundingBox().setY(getY() - 1);
+    public void moveUp(int delta) {
+        getBoundingBox().setY(getY() - 1.0 * (delta/10.0));
     }
 
-    public void moveDown() {
-        getBoundingBox().setY(getY() + 1);
+    public void moveDown(int delta) {
+        getBoundingBox().setY(getY() + 1.0 * (delta/10.0));
     }
     
 }
