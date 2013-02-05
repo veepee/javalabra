@@ -38,12 +38,17 @@ public class Entity {
     }
     
     /**
-     * Checks if the entity collides with another entity
+     * Checks if the entity will collide with another entity within the next frame
      * @param e Another entity against which collisions are checked for
      * @return Returns true if this entity collides with entity e, false otherwise
      */
     public boolean collides(Entity e) {
-        return getBoundingBox().collidesWith(e.getBoundingBox());
+        BoundingBox bb1 = new BoundingBox(boundingbox);
+        BoundingBox bb2 = new BoundingBox(e.boundingbox);
+        
+        bb1.move(velocityX, velocityY);
+        bb2.move(e.velocityX, e.velocityY);
+        return bb1.collidesWith(bb2);
     }
 
     /**

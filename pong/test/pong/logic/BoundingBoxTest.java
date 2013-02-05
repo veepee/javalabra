@@ -55,4 +55,12 @@ public class BoundingBoxTest {
         assertEquals(true, bb1.collidesWith(bb2));
     }
     
+    @Test
+    public void testMovement_BoundingBox_ShouldMove() {
+        BoundingBox bb = new BoundingBox(0.0, 0.0, 1.0, 1.0);
+        bb.move(2.0, 2.0);
+        assertEquals(2.0, bb.getX(), 1E-6);
+        assertEquals(2.0, bb.getY(), 1E-6);
+    }
+    
 }

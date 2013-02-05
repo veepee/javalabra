@@ -7,3 +7,5 @@ Pvm	Tunnit	Kuvaus
 22.01 	1h	Yksinkertainen määrittelyvaiheen luokkakaavio
 27.01	4h	Lisää luokkarakenteen suunnittelua ja prototyyppailua
 28.01	3h	Lisää logiikkaluokkia, tarkempi luokkakaavio
+04.02	1h	Sekvenssikaavioita
+05.02	3h	Javadoc, muutoksia logiikkaluokkiin

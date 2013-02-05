@@ -39,6 +39,17 @@ public class BoundingBox {
         this.w = w;
         this.h = h;
     }
+    
+    /**
+     * Copy constructor for BoundingBox
+     * @param bb The BoundingBox instance to clone
+     */
+     public BoundingBox(BoundingBox bb) {
+        this.x = bb.x;
+        this.y = bb.y;
+        this.w = bb.w;
+        this.h = bb.h;
+    }
 
     /**
      * Returns the X coordinate of the bounding box
@@ -86,6 +97,16 @@ public class BoundingBox {
      */
     public double getHeight() {
         return h;
+    }
+    
+    /**
+     * Moves the bounding box with the given offsets
+     * @param x Movement offset by X axis
+     * @param y Movement offset by Y axis
+     */
+    public void move(double x, double y) {
+        this.x += x;
+        this.y += y;
     }
     
     /**

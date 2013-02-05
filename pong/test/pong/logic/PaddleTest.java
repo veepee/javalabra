@@ -42,4 +42,13 @@ public class PaddleTest {
         assertEquals(-6.0, paddle.getY(), 1E-6);
     }
     
+    @Test
+    public void testPaddleMovement_ResetMovement_ResetsVelocity() {
+        Paddle paddle = new Paddle(0.0, 0.0);
+        paddle.moveUp();
+        paddle.resetMovement();
+        paddle.update(20);
+        assertEquals(0.0, paddle.getY(), 1E-6);
+    }
+    
 }
