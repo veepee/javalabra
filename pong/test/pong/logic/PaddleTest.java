@@ -21,22 +21,25 @@ public class PaddleTest {
     @Test
     public void testPaddleMovement_ValidMoveUp_ShouldMove() {
         Paddle paddle = new Paddle(0.0, 0.0);
-        paddle.moveUp(10);
-        assertEquals(-1.0, paddle.getY(), 1E-6);
+        paddle.moveUp();
+        paddle.update(10);
+        assertEquals(-2.0, paddle.getY(), 1E-6);
     }
     
     @Test
     public void testPaddleMovement_ValidMoveDown_ShouldMove() {
         Paddle paddle = new Paddle(0.0, 0.0);
-        paddle.moveDown(10);
-        assertEquals(1.0, paddle.getY(), 1E-6);
+        paddle.moveDown();
+        paddle.update(10);
+        assertEquals(2.0, paddle.getY(), 1E-6);
     }
     
     @Test
     public void testPaddleMovement_ValidMoveUp_IsFramerateIndependent() {
         Paddle paddle = new Paddle(0.0, 0.0);
-        paddle.moveUp(30);
-        assertEquals(-3.0, paddle.getY(), 1E-6);
+        paddle.moveUp();
+        paddle.update(30);
+        assertEquals(-6.0, paddle.getY(), 1E-6);
     }
     
 }
