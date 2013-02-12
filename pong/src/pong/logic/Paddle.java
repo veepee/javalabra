@@ -7,6 +7,11 @@ package pong.logic;
 public class Paddle extends Entity {
     
     /**
+     * The movement speed of the paddle
+     */
+    public static final double PADDLE_SPEED = 2.0;
+    
+    /**
      * Creates a new paddle
      * @param x X coordinate of the upper-left corner of the paddle
      * @param y Y coordinate of the upper-left corner of the paddle
@@ -58,14 +63,14 @@ public class Paddle extends Entity {
      * Sets the paddle moving up
      */
     public void moveUp() {
-        setVelocityY(-2);
+        setVelocityY(-PADDLE_SPEED);
     }
 
     /**
      * Sets the paddle moving downS
      */
     public void moveDown() {
-        setVelocityY(2);
+        setVelocityY(PADDLE_SPEED);
     }
     
     /**
