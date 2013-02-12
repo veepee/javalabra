@@ -40,7 +40,7 @@ public abstract class Renderer {
     }
     
     /**
-     * Is called once on each new frame to be renderer
+     * Is called once on each new frame to be rendered
      * @param g Graphics2D object for drawing onto the current buffer
      */
     public abstract void onRender(Graphics2D g);   

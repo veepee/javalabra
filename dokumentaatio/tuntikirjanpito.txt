@@ -9,3 +9,6 @@ Pvm	Tunnit	Kuvaus
 28.01	3h	Lisää logiikkaluokkia, tarkempi luokkakaavio
 04.02	1h	Sekvenssikaavioita
 05.02	3h	Javadoc, muutoksia logiikkaluokkiin
+10.02	2h	Framework-luokkien hahmottelua
+11.02	2h	Swing-käyttöliittymä alkuun, syötteiden kuuntelua
+12.02	2h	Kaksi uutta sekvenssikaaviota, teknisiä luokkia
