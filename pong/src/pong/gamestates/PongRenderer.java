@@ -7,11 +7,27 @@ import pong.framework.Renderer;
 import pong.logic.Game;
 import pong.swing.CanvasPanel;
 
+/**
+ * The renderer for the Pong game state
+ * @author veepee
+ */
 public class PongRenderer extends Renderer {
 
+    /**
+     * The Pong game state this renderer belongs to
+     */
     private PongState pongState;
+    /**
+     * The Game instance this renderer is attached onto
+     */
     private Game game;
     
+    /**
+     * Creates a new renderer for the Pong game state
+     * @param pongState The Pong game state this renderer belongs to
+     * @param game The Game instance this renderer is attached onto
+     * @param canvas The CanvasPanel this renderer will draw to
+     */
     public PongRenderer(PongState pongState, Game game, CanvasPanel canvas) {
         super(canvas);
         

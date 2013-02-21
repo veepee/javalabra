@@ -7,10 +7,22 @@ import pong.framework.Renderer;
 import pong.highscores.Highscore;
 import pong.swing.CanvasPanel;
 
+/**
+ * The renderer for the Highscores game state
+ * @author veepee
+ */
 public class HighscoresRenderer extends Renderer {
 
+    /**
+     * The Highscores game state this renderer belongs to
+     */
     private HighscoresState highscoresState;
     
+    /**
+     * Creates a new renderer for the Highscores game state
+     * @param highscoreEntryState The Highscores game state this input handler belongs to
+     * @param canvas The CanvasPanel this renderer will draw to
+     */
     public HighscoresRenderer(HighscoresState highscoresState,CanvasPanel canvas) {
         super(canvas);
         

@@ -8,6 +8,5 @@
 
 *.class
 
-*.jar
 *.war
 *.ear

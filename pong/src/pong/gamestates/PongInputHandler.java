@@ -5,13 +5,31 @@ import pong.framework.InputHandler;
 import pong.logic.Game;
 import pong.swing.KeyState;
 
+/**
+ * The input handler for the Pong game state
+ * @author veepee
+ */
 public class PongInputHandler implements InputHandler {
 
+    /**
+     * The Pong game state this input handler belongs to
+     */
     private PongState pongState;
+    /**
+     * The Game instance this input handler is attached onto
+     */
     private Game game;
     
+    /**
+     * Delay for avoiding a single key press being registered twice
+     */
     private int delay;
     
+    /**
+     * Creates a new input handler for the Pong game state
+     * @param pongState
+     * @param game 
+     */
     public PongInputHandler(PongState pongState, Game game) {
         this.pongState = pongState;
         this.game = game;

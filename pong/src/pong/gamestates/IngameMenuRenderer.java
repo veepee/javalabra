@@ -7,8 +7,15 @@ import pong.framework.GraphicsUtilities;
 import pong.framework.Renderer;
 import pong.swing.CanvasPanel;
 
+/**
+ * The renderer for the IngameMenu game state
+ * @author veepee
+ */
 public class IngameMenuRenderer extends Renderer {
     
+    /**
+     * Enum holding all the ingame menu items
+     */
     enum MenuItems {
         
         RESUME("Resume Game"), EXIT("Exit Game");
@@ -24,8 +31,16 @@ public class IngameMenuRenderer extends Renderer {
         }
     }
     
+    /**
+     * The IngameMenu game state this renderer belongs to
+     */
     private IngameMenuState ingameMenuState;
     
+    /**
+     * Creates a new renderer for the IngameMenu game state
+     * @param ingameMenuState The IngameMenu game state this renderer belongs to
+     * @param canvas The CanvasPanel this renderer will draw to
+     */
     public IngameMenuRenderer(IngameMenuState ingameMenuState, CanvasPanel canvas) {
         super(canvas);
         

@@ -4,12 +4,26 @@ import java.awt.event.KeyEvent;
 import pong.framework.InputHandler;
 import pong.swing.KeyState;
 
+/**
+ * The input handler for the Menu game state
+ * @author veepee
+ */
 public class MenuInputHandler implements InputHandler {
 
+    /**
+     * The Menu game state this input handler belongs to
+     */
     private MenuState menuState;
     
+    /**
+     * The keyReleased boolean for storing if any keys were pressed during the last frame
+     */
     private boolean keyReleased = true;
     
+    /**
+     * Creates a new input handler for the Menu game state
+     * @param menuState The Menu game state this input handler belongs to
+     */
     public MenuInputHandler(MenuState menuState) {
         this.menuState = menuState;
     }
