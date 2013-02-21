@@ -46,9 +46,15 @@ public class Entity {
         BoundingBox bb1 = new BoundingBox(boundingbox);
         BoundingBox bb2 = new BoundingBox(e.boundingbox);
         
-        bb1.move(velocityX, velocityY);
-        bb2.move(e.velocityX, e.velocityY);
-        return bb1.collidesWith(bb2);
+        for(int i = 0; i < 10; i++) {
+            bb1.move(velocityX/10, velocityY/10);
+            bb2.move(e.velocityX/10, e.velocityY/10);
+            if(bb1.collidesWith(bb2)) {
+                return true;
+            }
+        }
+    
+        return false;
     }
 
     /**

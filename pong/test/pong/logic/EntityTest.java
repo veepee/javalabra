@@ -38,7 +38,7 @@ public class EntityTest {
     public void testEntityCollision_AccountsForVelocity_ShouldntNowCollide() {
         Entity e1 = new Entity(new BoundingBox(3.0, 3.0, 6.0, 6.0));
         e1.setVelocityX(-8.0);
-        Entity e2 = new Entity(new BoundingBox(4.0, 5.0, 7.0, 7.0));
+        Entity e2 = new Entity(new BoundingBox(3.0, 12.0, 7.0, 7.0));
         assertEquals(false, e1.collides(e2));
     }
 }

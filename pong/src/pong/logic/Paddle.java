@@ -17,7 +17,7 @@ public class Paddle extends Entity {
      * @param y Y coordinate of the upper-left corner of the paddle
      */
     public Paddle(double x, double y) {
-        super(new BoundingBox(x, y, 4, 16));
+        super(new BoundingBox(x, y, 16, 64));
     }
 
     /**
@@ -67,10 +67,17 @@ public class Paddle extends Entity {
     }
 
     /**
-     * Sets the paddle moving downS
+     * Sets the paddle moving down
      */
     public void moveDown() {
         setVelocityY(PADDLE_SPEED);
+    }
+    
+    /**
+     * Resets the paddle velocity
+     */
+    public void resetVelocity() {
+        setVelocityY(0);
     }
     
     /**

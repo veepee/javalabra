@@ -1,9 +1,9 @@
 package pong.swing;
 
-import javax.swing.JFrame;
-import javax.swing.WindowConstants;
 import java.awt.Dimension;
 import java.awt.KeyboardFocusManager;
+import javax.swing.JFrame;
+import javax.swing.WindowConstants;
 
 /**
  * The main GUI class using Swing. Creates the GUI window (JFrame),
@@ -53,7 +53,7 @@ public class GUI implements Runnable {
         frame = new JFrame(windowTitle);
         
         frame.setPreferredSize(windowSize);
-        frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         
         canvas = new CanvasPanel();
         frame.getContentPane().add(canvas);

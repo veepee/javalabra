@@ -36,6 +36,10 @@ public class GameStateManager {
      * Exits the currently executing GameState
      */
     public void exit() {
+        if(states.empty()) {
+            return;
+        }
+        
         states.peek().onExit();
         states.pop();
     }
@@ -44,7 +48,8 @@ public class GameStateManager {
      * Starts the GameStateManager and begins dispatching game states.
      * Method will exit when there are no more game states available on the stack.
      */
-    public void run() {  
+    @SuppressWarnings("SleepWhileInLoop")
+    public void run() {
         
         while(!states.isEmpty()) {
             long t = System.nanoTime();

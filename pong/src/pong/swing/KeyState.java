@@ -12,7 +12,7 @@ public class KeyState {
      * Boolean array for storing the key states
      */
     private boolean[] keys;
-    
+
     /**
      * Creates a new KeyState with none of the keys set
      */
@@ -54,5 +54,5 @@ public class KeyState {
             return false;
         }
         return keys[code];
-    }   
+    }
 }

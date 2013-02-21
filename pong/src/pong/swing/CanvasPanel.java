@@ -1,9 +1,9 @@
 package pong.swing;
 
-import javax.swing.JPanel;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
+import javax.swing.JPanel;
 
 /**
  * The CanvasPanel class providing a double buffered JPanel implementation for

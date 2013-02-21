@@ -12,3 +12,8 @@ Pvm	Tunnit	Kuvaus
 10.02	2h	Framework-luokkien hahmottelua
 11.02	2h	Swing-käyttöliittymä alkuun, syötteiden kuuntelua
 12.02	2h	Kaksi uutta sekvenssikaaviota, teknisiä luokkia
+17.02	4h	Alustavia GameState-luokkia, käyttöliittymä
+18.02	3h 	Lisää GameState-luokkia
+19.02	5h	Pelin valikot, graafista ulkoasua, tekoäly
+20.02	3h	Highscores, tiedostojen ja syötteiden lukua
+21.02	2h	Refaktorointia, lisää javadocia, korjattu testejä

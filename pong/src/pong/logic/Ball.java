@@ -12,7 +12,7 @@ public class Ball extends Entity {
      * @param y Y coordinate of the upper-left corner of the ball
      */
     public Ball(double x, double y) {
-        super(new BoundingBox(x, y, 4.0, 4.0));
+        super(new BoundingBox(x, y, 16.0, 16.0));
     }
 
     /**
@@ -24,11 +24,27 @@ public class Ball extends Entity {
     }
     
     /**
+     * Sets the X coordinate of the upper-left corner of the ball
+     * @param x X coordinate of the upper-left corner of the ball
+     */
+    public void setX(double x) {
+        getBoundingBox().setX(x);
+    }
+    
+    /**
      * Returns Y coordinate of the upper-left corner of the ball
      * @return Y coordinate of the upper-left corner of the ball
      */
     public double getY() {
         return getBoundingBox().getY();
+    }
+    
+    /**
+     * Sets the Y coordinate of the upper-left corner of the ball
+     * @param y Y coordinate of the upper-left corner of the ball
+     */
+    public void setY(double y) {
+        getBoundingBox().setY(y);
     }
     
     /**
@@ -71,5 +87,16 @@ public class Ball extends Entity {
      */
     public void invertVelocityY() {
         setVelocityY(-getVelocityY());
+    }
+    
+    /**
+     * Apply spin to the ball
+     * @param d Amount of spin to be applied
+     */
+    public void applySpin(double d) {
+        setVelocityY(getVelocityY() + d);
+        if(Math.abs(getVelocityY()) < 0.5) {
+            setVelocityY(getVelocityY() + (Math.random()*4) - 2);
+        }
     }
 }
